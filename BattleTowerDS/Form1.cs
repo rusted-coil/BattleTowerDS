@@ -49,7 +49,7 @@ namespace BattleTowerDS
                 pokemons = pokemons.Where(pokemon => pokemon.Name.Contains(pokemonName));
             }
 
-            m_PokemonsView.Show(pokemons);
+            m_PokemonsView.Show(pokemons.Distinct());
         }
 
         private void TrainerClass_TextChanged(object sender, EventArgs e) => RefreshSearch();
